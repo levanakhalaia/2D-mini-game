@@ -1,0 +1,416 @@
+canvas {
+    border: 2px solid black;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: gameFont;
+    src: url(./font/ThaleahFat.ttf);
+}
+
+.load {
+    background: url('./img/Ghost.gif');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.myGame {
+    display: flex;
+}
+
+
+.reward {
+    background-color: pink;
+}
+
+.rr{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.demonhealth {
+    width: 100px;
+    height: 5px;
+    background-color: red;
+    position: absolute;
+    left: 996px;
+    top: 420px;
+}
+
+.characterhealth {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.healthlogo {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.healthlogo img {
+    width: 100%;
+    height: 100%;
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 50%;
+}
+
+.healthwidth {
+    margin-left: 3px;
+    height: 10px;
+    background-color: red;
+    width: 150px;
+    border-radius: 3px;
+}
+
+.start {
+    background-color: #1C686B;
+    height: 600px;
+    width: 1200px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+
+.startmiddle {
+    width: 25%;
+    height: 50%;
+}
+
+.startbtn {
+    font-family: gameFont;
+    font-size: 30px;
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.play img {
+    width: 25px;
+    height: 25px;
+}
+
+.playandpause {
+    display: flex;
+    justify-content: center;
+}
+
+.playmusic img,
+.pausemusic img{
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.pausemusic {
+    margin-left: 10px;
+}
+
+.skull {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.skull img {
+    width: 30px;
+    height: 30px;
+}
+
+.hint {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+
+.move img {
+    width: 30px;
+    height: 30px;
+}
+
+.space img {
+    width: 50px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.move,
+.space {
+    display: flex;
+    align-items: center;
+}
+
+.move h1,
+.space h1 {
+    font-family: gameFont;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.enemy2health {
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    top: 460px;
+    border-radius: 3px;
+    left: 20px;
+    background-color: red;
+    display: none;
+}
+
+
+.alert {
+    width: 0;
+    height: 200px;
+    position: absolute;
+    background-color: #d1cdcd;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: boss ease-in-out forwards;
+    transition: 1.5s;
+    display: none;
+}
+
+.alert img {
+    width: 300px;
+    height: 300px;
+}
+
+.alert h1 {
+    font-family: gameFont;
+}
+
+@keyframes boss {
+    to {
+        width: 1200px;
+    }
+}
+
+.losepage {
+    background-color: #1C686B;
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.losepagemiddle {
+    width: 25%;
+    height: 25%;
+}
+
+.restartpg img {
+    width: 25px;
+    height: 25px;
+}
+
+.restartpg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.restart {
+    font-family: gameFont;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    margin-left: 3px;
+}
+
+.dietext img {
+    width: 25px;
+    height: 25px;
+}
+
+.dietext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dietext h1 {
+    font-size: 16px;
+    font-family: gameFont;
+    color:  #FFFFFF;
+    margin-left: 4px;
+}
+
+.bosshealth {
+    position: absolute;
+    left: 300px;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    display: none;
+
+}
+
+.bosshealthicon img {
+    width: 30px;
+    height: 30px;
+}
+
+.bosshealthlenth {
+    width: 600px;
+    background-color: #2e2727;
+    height: 10px;
+    margin-left: 6px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: -5px;
+}
+
+.refillhealth {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 1000px;
+    top: 130px;
+    display: none;
+    cursor: pointer;
+
+}
+
+.refillhealth img {
+    width: 100%;
+    height: 100%;
+}
+
+.refillhealth h1 {
+    font-family: gameFont;
+    font-size: 12px;
+    color: #d7d2d2;
+    letter-spacing: 1.5px;
+}
+
+.nextworld {
+    background-color: #1C686B;
+    position: absolute;
+    width: 1200px;
+    height: 600px;
+    z-index: 123;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.nextworld h1 {
+    font-family: gameFont;
+    color: #FFFFFF;
+}
+
+
+.finalbosshealthbar {
+    position: absolute;
+    top: 30px;
+    width: 420px;
+    height: 200px;
+    display: none;
+}
+.ffbshealth img {
+    width: 420px;
+    height: 200px;
+}
+
+.pic {
+    position: absolute;
+    top: 55px;
+    left: 40px;
+}
+
+.pic img {
+    width: 90px;
+    height: 90px;
+}
+
+.healthline {
+    width: 270px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    top: 96px;
+    left: 123px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+.winalert {
+    background-color: #1C686B;
+    width: 1200px;
+    height: 600px;
+    z-index: 444;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.winalert h1 {
+    font-size: 22px;
+    font-family: gameFont;
+    color: #FFFFFF;
+}
+
+.winalert img {
+    width: 300px;
+    height: 300px;
+}
+
+.playagain {
+    font-family: gameFont;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    margin-left: 3px;
+}
